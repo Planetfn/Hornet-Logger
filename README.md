@@ -59,7 +59,7 @@ The .exe Will Appear In The Dist Folder, Send This To Your Victims!!
 
 <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
   
-### GUI
+### Usage
 
 <div align="center">
     <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="https://cdn.discordapp.com/attachments/1125786029899653153/1127212382771482724/image.png"></img>
