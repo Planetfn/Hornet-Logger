@@ -21,6 +21,7 @@
 - Desktop Name
 - PC Name
 - Obfuscation
+- Junk Code
  
 <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
   
@@ -39,7 +40,7 @@ Once You've Downloaded The File Extract The Folde
 ### 3. Open The setup.bat File:
 
 ```
-Open Up setup.bat And Once Its Finished Open Up Builder.py
+Open Up setup.bat And Once Its Finished Open Up Builder.py (all credits to creal stealer for the builder)
 ```
 ### 4. Create A Webhook:
 
