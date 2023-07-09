@@ -4,7 +4,6 @@ requests
 pypiwin32
 wmi
 requests-toolbelt
-# Builder
 colorama
 pyinstaller
 cx-Freeze
@@ -12,3 +11,20 @@ pyuac
 pillow
 pycryptodomex
 customtkinter
+httpx
+pyperclip
+asyncio
+winregistry
+pypiwin32==223
+pycryptodome
+pyinstaller&gt;=5.0
+PIL-tools
+threaded
+datetime
+pyfiglet
+tqdm
+pypresence
+opencv-python
+tqdm
+pyfiglet
+argparse
