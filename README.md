@@ -22,6 +22,16 @@
 - PC Name
 - Obfuscation
 - Junk Code
+- Motherboard
+- Diskdrive Serial
+- Gpu Serial
+- Bios Serial
+- Baseboard Serial
+- OS Name
+- Mac Address
+- GPU
+- Anti Virus Total
+- No Virus Total Logs
  
 <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
   
@@ -63,7 +73,7 @@ The .exe Will Appear In The Dist Folder, Send This To Your Victims!!
 ### Usage
 
 <div align="center">
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="https://cdn.discordapp.com/attachments/1125786029899653153/1127212382771482724/image.png"></img>
+    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="https://cdn.discordapp.com/attachments/1125786029899653153/1127636062416683068/image.png"></img>
 </div>
 
 ### Star Graph
