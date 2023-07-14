@@ -31,7 +31,8 @@
 - Mac Address
 - GPU
 - Anti Virus Total
-- No Virus Total Logs
+- No Virus Total Logs (REMOVED YOU CAN JUST MAKE def virus_total_send(): BLANK TO WORK)
+- Send Virus Total Log (detects if the user ran the file in virus total, if it has it wont send as much info to optimize your server)
  
 <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
   
