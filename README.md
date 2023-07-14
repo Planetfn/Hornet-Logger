@@ -75,6 +75,9 @@ The .exe Will Appear In The Dist Folder, Send This To Your Victims!!
 <div align="center">
     <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="https://cdn.discordapp.com/attachments/1125786029899653153/1127636062416683068/image.png"></img>
 </div>
+<div align="center">
+    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="https://cdn.discordapp.com/attachments/1125786029899653153/1129428733137276978/image.png"></img>
+</div>
 
 ### Star Graph
 
