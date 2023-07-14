@@ -17,7 +17,7 @@ asyncio
 winregistry
 pypiwin32==223
 pycryptodome
-pyinstaller&gt;=5.0
+pyinstaller
 PIL-tools
 threaded
 datetime
@@ -28,3 +28,4 @@ opencv-python
 tqdm
 pyfiglet
 argparse
+getpass4
